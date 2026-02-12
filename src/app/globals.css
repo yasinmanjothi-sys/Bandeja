@@ -1,26 +1,86 @@
 @import "tailwindcss";
 
+@theme {
+  --font-serif: var(--font-fraunces), serif;
+  --font-sans: var(--font-dm-sans), sans-serif;
+  --font-display: var(--font-dm-serif-display), serif;
+
+  --color-paper: #FDFBF7;
+  /* Warm paper texture base */
+  --color-burgundy: #5D2A2A;
+  /* From 'GARDEN KITCHEN' text */
+  --color-terracotta: #E07A5F;
+  /* Keeping for accents */
+  --color-gold: #C0A062;
+  /* Slightly darker gold */
+  --color-charcoal: #262626;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  background-color: var(--color-paper);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans);
+  position: relative;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+/* Tropical Shadow Overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/shadow-overlay.png");
+  background-size: cover;
+  background-position: center;
+  pointer-events: none;
+  z-index: 50;
+  /* Sit on top of content to cast shadow */
+  opacity: 0.15;
+  /* Subtle effect */
+  mix-blend-mode: multiply;
+}
+
+/* Ensure content sits above the shadow */
+main {
+  position: relative;
+  z-index: 1;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-burgundy);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-terracotta);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 40s linear infinite;
 }
