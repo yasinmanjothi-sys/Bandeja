@@ -60,7 +60,7 @@ export default function Footer() {
                         className="my-4 md:my-0 hover:opacity-100 transition-opacity duration-300"
                     >
                         <Image
-                            src="/RED BOAT Badge .svg"
+                            src="/red-boat-badge.svg"
                             alt="Made by Red Boat Media"
                             width={100}
                             height={30}
