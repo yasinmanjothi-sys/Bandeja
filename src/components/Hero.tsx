@@ -14,6 +14,8 @@ export default function Hero() {
                     loop
                     muted
                     playsInline
+                    preload="auto"
+                    poster="/hero-bg.jpg"
                     className="object-cover w-full h-full opacity-60 mix-blend-multiply scale-125"
                 >
                     <source src="/hero-2.mp4" type="video/mp4" />

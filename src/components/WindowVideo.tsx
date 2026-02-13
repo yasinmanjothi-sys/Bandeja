@@ -30,6 +30,7 @@ export default function WindowVideo() {
                     loop
                     muted
                     playsInline
+                    preload="metadata"
                     className="object-cover w-full h-full"
                 />
 
