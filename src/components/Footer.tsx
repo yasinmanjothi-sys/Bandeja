@@ -23,7 +23,7 @@ export default function Footer() {
                         <div className="space-y-2">
                             <p className="text-xl font-serif text-terracotta">Visit Us</p>
                             <p className="opacity-80 font-light">
-                                General Mathenge Dr,<br />
+                                Jalaram Rd,<br />
                                 Westlands, Nairobi
                             </p>
                         </div>
@@ -48,9 +48,27 @@ export default function Footer() {
 
                 </div>
 
-                <div className="mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs opacity-40 font-mono">
+
+                <div className="mt-8 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs opacity-40 font-mono">
                     <p>© 2026 Bandeja Nairobi. All Rights Reserved.</p>
-                    <div className="flex gap-4 mt-4 md:mt-0">
+
+                    {/* Red Boat Media Badge */}
+                    <a
+                        href="https://redboatmedia.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="my-4 md:my-0 hover:opacity-100 transition-opacity duration-300"
+                    >
+                        <Image
+                            src="/RED BOAT Badge .svg"
+                            alt="Made by Red Boat Media"
+                            width={100}
+                            height={30}
+                            className="h-6 w-auto"
+                        />
+                    </a>
+
+                    <div className="flex gap-4">
                         <a href="https://www.instagram.com/bandeja.kenya/" target="_blank" rel="noopener noreferrer" className="hover:text-white cursor-pointer transition-colors">INSTAGRAM</a>
                         <span className="hover:text-white cursor-pointer transition-colors">TIKTOK</span>
                     </div>

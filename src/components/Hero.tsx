@@ -42,7 +42,7 @@ export default function Hero() {
                         alt="Bandeja"
                         width={1000}
                         height={400}
-                        className="w-full max-w-[1000px] h-auto brightness-0 invert opacity-90 drop-shadow-2xl"
+                        className="w-[85%] sm:w-[70%] md:w-[60%] lg:w-[50%] xl:w-[40%] max-w-[800px] h-auto brightness-0 invert opacity-90 drop-shadow-2xl"
                         priority
                     />
                 </motion.div>
